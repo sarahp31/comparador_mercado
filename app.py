@@ -12,6 +12,84 @@ from Mercados.funcoes import buscar_pao_de_acucar, buscar_extra, buscar_sonda, b
 # definir wide mode
 st.set_page_config(layout="wide")
 
+st.markdown("""
+<style>
+/* Fundo da página */
+.stApp {
+    background: linear-gradient(to bottom, #f9fcfb, #e9f1ef);
+    font-family: 'Segoe UI', sans-serif;
+    color: #2c3e50;
+}
+
+/* Título principal */
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Card de produto */
+.produto-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagem */
+.produto-card img {
+    max-width: 100%;
+    max-height: 180px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+/* Texto do produto */
+.produto-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Preço */
+.produto-card .preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 10px;
+}
+
+/* Link */
+.produto-card a {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #2980b9;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.produto-card a:hover {
+    background-color: #1c5980;
+}
+
+/* Expander */
+details summary {
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 button_style = """
 <style>
 /* Aplica o estilo aos botões, exceto os com a classe "logout-button" */
