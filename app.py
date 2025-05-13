@@ -11,17 +11,13 @@ from Mercados.funcoes import buscar_pao_de_acucar, buscar_extra, buscar_sonda, b
 
 st.set_page_config(layout="wide")
 
-# CSS aprimorado com fundo mais suave
+# CSS com fundo sutil e controle de imagem
 st.markdown("""
 <style>
-body {
+html, body, .stApp {
     background-color: #f9fcfb;
     font-family: 'Segoe UI', sans-serif;
     color: #333;
-}
-
-.stApp {
-    background-color: #f9fcfb;
 }
 
 .produto-card {
@@ -29,7 +25,7 @@ body {
     border: 1px solid #e1e8e3;
     border-radius: 16px;
     padding: 20px;
-    margin: 10px auto;
+    margin: 20px auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.06);
     max-width: 600px;
