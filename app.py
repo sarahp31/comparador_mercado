@@ -16,7 +16,7 @@ st.markdown("""
 <style>
 /* Fundo da página */
 .stApp {
-    background: linear-gradient(to bottom, #f9fcfb, #e9f1ef);
+    background: linear-gradient(to bottom, #d4f5dc, #a8e6b1);
     font-family: 'Segoe UI', sans-serif;
     color: #2c3e50;
 }
