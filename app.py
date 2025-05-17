@@ -192,10 +192,10 @@ with tab1:
                         else:
                             st.write("📷 Imagem não disponível")
 
-                   with col2:
+                    with col2:
                         preco = r.get("preco")
                         link = r.get("link")
-                    
+
                         st.markdown(f"""
                         <div style='display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.6;'>
                             <div><strong>🛍️ Nome:</strong> {r.get('nome', 'Não disponível')}</div>
@@ -655,10 +655,3 @@ with tab2:
                 file_name="supermercados.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
-
-
-
-
-
-
-                        
