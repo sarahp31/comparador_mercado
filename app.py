@@ -192,19 +192,20 @@ with tab1:
                         else:
                             st.write("📷 Imagem não disponível")
 
-                    with col2:
-                        st.write(f"**Nome:** {r.get('nome', 'Não disponível')}")
-                        st.write(f"**Marca:** {r.get('marca', 'Não disponível')}")
-
+                   with col2:
                         preco = r.get("preco")
-                        if isinstance(preco, (int, float)):
-                            st.write(f"**Preço:** R$ {preco:.2f}")
-                        else:
-                            st.write("**Preço:** Não disponível")
-
                         link = r.get("link")
-                        if link:
-                            st.markdown(f"[🔗 Link para compra]({link})", unsafe_allow_html=True)
+                    
+                        st.markdown(f"""
+                        <div style='display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.6;'>
+                            <div><strong>🛍️ Nome:</strong> {r.get('nome', 'Não disponível')}</div>
+                            <div><strong>🏷️ Marca:</strong> {r.get('marca', 'Não disponível')}</div>
+                            <div><strong>💰 Preço:</strong> <span style='color: #27ae60; font-weight: bold;'>
+                                {"R$ {:.2f}".format(preco) if isinstance(preco, (int, float)) else "Não disponível"}
+                            </span></div>
+                            {f"<div><a href='{link}' target='_blank' style='color: #2980b9; font-weight: 600; text-decoration: none;'>🔗 Link para compra</a></div>" if link else ""}
+                        </div>
+                        """, unsafe_allow_html=True)
 
                     st.markdown("</div>", unsafe_allow_html=True)
 
